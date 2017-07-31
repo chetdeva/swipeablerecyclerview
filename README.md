@@ -1,6 +1,6 @@
-## Draggable RecyclerView
+## Swipeable RecyclerView
 
-SwipeableRecyclerView provides a wrapper class `SwipeItemTouchHelperCallback` extends `ItemTouchHelper.Callback` which can be used to add Dragging capability to your RecyclerView items. You make use of `DataBinding` to bind it via XML.
+SwipeableRecyclerView provides a wrapper class `SwipeItemTouchHelperCallback` extends `ItemTouchHelper.Callback` which can be used to add Swiping capability to your RecyclerView items. You make use of `DataBinding` to bind it via XML.
 
 <img src="./README_images/swipeable_recyclerview.gif" width="300" height="534"/>
 
