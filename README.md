@@ -39,8 +39,8 @@ In your `BindingAdapter`
 	public static void setItemSwipeToRecyclerView(RecyclerView recyclerView, boolean swipeEnabled, Drawable drawableLeft, Drawable drawableRight, int bgColorSwipeLeft, int bgColorSwipeRight,
 	                                              SwipeItemTouchHelperCallback.OnItemSwipeListener onSwipeLeft, SwipeItemTouchHelperCallback.OnItemSwipeListener onSwipeRight) {
 
-        ... // attach RecyclerView to SwipeItemTouchHelperCallback as above
-    }
+		... // attach RecyclerView to SwipeItemTouchHelperCallback as above
+	}
 ```
 
 In your `XML` file
