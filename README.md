@@ -35,12 +35,12 @@ In your `Gradle`
 In your `BindingAdapter`
 
 ```
-	@android.databinding.BindingAdapter(value = {"swipeEnabled", "drawableSwipeLeft", "drawableSwipeRight", "bgColorSwipeLeft", "bgColorSwipeRight", "onSwipeLeft", "onSwipeRight"}, requireAll = false)
-	public static void setItemSwipeToRecyclerView(RecyclerView recyclerView, boolean swipeEnabled, Drawable drawableLeft, Drawable drawableRight, int bgColorSwipeLeft, int bgColorSwipeRight,
-	                                              SwipeItemTouchHelperCallback.OnItemSwipeListener onSwipeLeft, SwipeItemTouchHelperCallback.OnItemSwipeListener onSwipeRight) {
+    @android.databinding.BindingAdapter(value = {"swipeEnabled", "drawableSwipeLeft", "drawableSwipeRight", "bgColorSwipeLeft", "bgColorSwipeRight", "onSwipeLeft", "onSwipeRight"}, requireAll = false)
+    public static void setItemSwipeToRecyclerView(RecyclerView recyclerView, boolean swipeEnabled, Drawable drawableLeft, Drawable drawableRight, int bgColorSwipeLeft, int bgColorSwipeRight,
+                                                      SwipeItemTouchHelperCallback.OnItemSwipeListener onSwipeLeft, SwipeItemTouchHelperCallback.OnItemSwipeListener onSwipeRight) {
 
-		... // attach RecyclerView to SwipeItemTouchHelperCallback as above
-	}
+        ... // attach RecyclerView to SwipeItemTouchHelperCallback as above
+    }
 ```
 
 In your `XML` file
