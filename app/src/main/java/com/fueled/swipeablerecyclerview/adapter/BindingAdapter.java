@@ -7,8 +7,6 @@ import android.support.v7.widget.helper.ItemTouchHelper;
 import com.fueled.swipeablerecyclerview.SwipeItemTouchHelperCallback;
 
 /**
- * Copyright (c) 2017 Fueled. All rights reserved.
- *
  * @author chetansachdeva on 27/07/17
  */
 

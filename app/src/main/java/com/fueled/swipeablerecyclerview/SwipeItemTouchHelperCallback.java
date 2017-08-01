@@ -11,7 +11,6 @@ import android.view.View;
 import com.fueled.swipeablerecyclerview.util.ViewUtil;
 
 /**
- * Copyright (c) 2017 Fueled. All rights reserved.
  * Reference @link {https://www.learn2crack.com/2016/02/custom-swipe-recyclerview.html}
  *
  * @author chetansachdeva on 26/07/17

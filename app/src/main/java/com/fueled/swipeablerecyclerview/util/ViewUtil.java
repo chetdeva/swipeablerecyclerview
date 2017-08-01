@@ -6,8 +6,6 @@ import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 
 /**
- * Copyright (c) 2017 Fueled. All rights reserved.
- *
  * @author chetansachdeva on 25/07/17
  *
  * Utility class pertaining to Views
