@@ -35,12 +35,24 @@ In your `Gradle`
 In your `BindingAdapter`
 
 ```
-    @android.databinding.BindingAdapter(value = {"swipeEnabled", "drawableSwipeLeft", "drawableSwipeRight", "bgColorSwipeLeft", "bgColorSwipeRight", "onSwipeLeft", "onSwipeRight"}, requireAll = false)
-    public static void setItemSwipeToRecyclerView(RecyclerView recyclerView, boolean swipeEnabled, Drawable drawableLeft, Drawable drawableRight, int bgColorSwipeLeft, int bgColorSwipeRight,
-                                                      SwipeItemTouchHelperCallback.OnItemSwipeListener onSwipeLeft, SwipeItemTouchHelperCallback.OnItemSwipeListener onSwipeRight) {
+	/**
+	 * Bind ItemTouchHelper.SimpleCallback with RecyclerView
+	 *
+	 * @param recyclerView      RecyclerView to bind to SwipeItemTouchHelperCallback
+	 * @param swipeEnabled      enable/disable swipe
+	 * @param drawableLeft      drawable shown when swiped left
+	 * @param drawableRight     drawable shown when swiped right
+	 * @param bgColorSwipeLeft  background color when swiped left
+	 * @param bgColorSwipeRight background color when swiped right
+	 * @param onSwipeLeft       OnItemSwipeListener for swiped left
+	 * @param onSwipeRight      OnItemSwipeListener for swiped right
+	 */
+	@android.databinding.BindingAdapter(value = {"swipeEnabled", "drawableSwipeLeft", "drawableSwipeRight", "bgColorSwipeLeft", "bgColorSwipeRight", "onSwipeLeft", "onSwipeRight"}, requireAll = false)
+	public static void setItemSwipeToRecyclerView(RecyclerView recyclerView, boolean swipeEnabled, Drawable drawableLeft, Drawable drawableRight, int bgColorSwipeLeft, int bgColorSwipeRight,
+	                                              SwipeItemTouchHelperCallback.OnItemSwipeListener onSwipeLeft, SwipeItemTouchHelperCallback.OnItemSwipeListener onSwipeRight) {
 
-        ... // attach RecyclerView to SwipeItemTouchHelperCallback as above
-    }
+		... // attach RecyclerView to SwipeItemTouchHelperCallback as above
+	}
 ```
 
 In your `XML` file

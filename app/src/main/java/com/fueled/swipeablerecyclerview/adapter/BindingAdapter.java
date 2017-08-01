@@ -30,7 +30,7 @@ public class BindingAdapter {
 	public static void setItemSwipeToRecyclerView(RecyclerView recyclerView, boolean swipeEnabled, Drawable drawableLeft, Drawable drawableRight, int bgColorSwipeLeft, int bgColorSwipeRight,
 	                                              SwipeItemTouchHelperCallback.OnItemSwipeListener onSwipeLeft, SwipeItemTouchHelperCallback.OnItemSwipeListener onSwipeRight) {
 
-		SwipeItemTouchHelperCallback swipeCallback = new SwipeItemTouchHelperCallback
+		ItemTouchHelper.Callback swipeCallback = new SwipeItemTouchHelperCallback
 				.Builder(0, ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT)
 				.bgColorSwipeLeft(bgColorSwipeLeft)
 				.bgColorSwipeRight(bgColorSwipeRight)
