@@ -6,7 +6,7 @@ package com.fueled.swipeablerecyclerview;
 
 public interface SwipeHandler {
 
-	void onSwipedLeft(int position);
+	void onItemSwipedLeft(int position);
 
-	void onSwipedRight(int position);
+	void onItemSwipedRight(int position);
 }

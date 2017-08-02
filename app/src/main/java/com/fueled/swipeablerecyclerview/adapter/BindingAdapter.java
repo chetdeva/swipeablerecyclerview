@@ -21,12 +21,12 @@ public class BindingAdapter {
 	 * @param drawableRight     drawable shown when swiped right
 	 * @param bgColorSwipeLeft  background color when swiped left
 	 * @param bgColorSwipeRight background color when swiped right
-	 * @param onSwipeLeft       OnItemSwipeListener for swiped left
-	 * @param onSwipeRight      OnItemSwipeListener for swiped right
+	 * @param onItemSwipeLeft   OnItemSwipeListener for swiped left
+	 * @param onItemSwipeRight  OnItemSwipeListener for swiped right
 	 */
-	@android.databinding.BindingAdapter(value = {"swipeEnabled", "drawableSwipeLeft", "drawableSwipeRight", "bgColorSwipeLeft", "bgColorSwipeRight", "onSwipeLeft", "onSwipeRight"}, requireAll = false)
+	@android.databinding.BindingAdapter(value = {"swipeEnabled", "drawableSwipeLeft", "drawableSwipeRight", "bgColorSwipeLeft", "bgColorSwipeRight", "onItemSwipeLeft", "onItemSwipeRight"}, requireAll = false)
 	public static void setItemSwipeToRecyclerView(RecyclerView recyclerView, boolean swipeEnabled, Drawable drawableLeft, Drawable drawableRight, int bgColorSwipeLeft, int bgColorSwipeRight,
-	                                              SwipeItemTouchHelperCallback.OnItemSwipeListener onSwipeLeft, SwipeItemTouchHelperCallback.OnItemSwipeListener onSwipeRight) {
+	                                              SwipeItemTouchHelperCallback.OnItemSwipeListener onItemSwipeLeft, SwipeItemTouchHelperCallback.OnItemSwipeListener onItemSwipeRight) {
 
 		ItemTouchHelper.Callback swipeCallback = new SwipeItemTouchHelperCallback
 				.Builder(0, ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT)
@@ -35,8 +35,8 @@ public class BindingAdapter {
 				.drawableLeft(drawableLeft)
 				.drawableRight(drawableRight)
 				.setSwipeEnabled(swipeEnabled)
-				.swipeLeftListener(onSwipeLeft)
-				.swipeRightListener(onSwipeRight)
+				.swipeLeftListener(onItemSwipeLeft)
+				.swipeRightListener(onItemSwipeRight)
 				.build();
 
 		ItemTouchHelper itemTouchHelper = new ItemTouchHelper(swipeCallback);

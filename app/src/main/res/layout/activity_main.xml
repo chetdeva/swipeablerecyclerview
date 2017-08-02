@@ -24,8 +24,8 @@
             bind:bgColorSwipeRight="@{@color/app_red}"
             bind:drawableSwipeLeft="@{@drawable/ic_check_white_24dp}"
             bind:drawableSwipeRight="@{@drawable/ic_close_white_24dp}"
-            bind:onSwipeLeft="@{(position) -> handler.onSwipedLeft(position)}"
-            bind:onSwipeRight="@{(position) -> handler.onSwipedRight(position)}"
+            bind:onItemSwipeLeft="@{(position) -> handler.onItemSwipedLeft(position)}"
+            bind:onItemSwipeRight="@{(position) -> handler.onItemSwipedRight(position)}"
             bind:swipeEnabled="@{true}"/>
 
     </FrameLayout>

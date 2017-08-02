@@ -43,12 +43,12 @@ public class MainActivity extends AppCompatActivity implements SwipeHandler {
 		return list;
 	}
 
-	@Override public void onSwipedLeft(int position) {
+	@Override public void onItemSwipedLeft(int position) {
 		saveAndRemoveItem(position);
 		showSnackbar("Swiped Left " + position);
 	}
 
-	@Override public void onSwipedRight(int position) {
+	@Override public void onItemSwipedRight(int position) {
 		saveAndRemoveItem(position);
 		showSnackbar("Swiped Right " + position);
 	}

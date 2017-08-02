@@ -14,8 +14,8 @@ SwipeableRecyclerView provides a wrapper class `SwipeItemTouchHelperCallback` ex
             .drawableLeft(drawableLeft)
             .drawableRight(drawableRight)
             .setSwipeEnabled(swipeEnabled)
-            .swipeLeftListener(onSwipeLeft)
-            .swipeRightListener(onSwipeRight)
+            .swipeLeftListener(onItemSwipeLeft)
+            .swipeRightListener(onItemSwipeRight)
             .build();
 
     ItemTouchHelper itemTouchHelper = new ItemTouchHelper(swipeCallback);
@@ -44,12 +44,12 @@ In your `BindingAdapter`
 	 * @param drawableRight     drawable shown when swiped right
 	 * @param bgColorSwipeLeft  background color when swiped left
 	 * @param bgColorSwipeRight background color when swiped right
-	 * @param onSwipeLeft       OnItemSwipeListener for swiped left
-	 * @param onSwipeRight      OnItemSwipeListener for swiped right
+	 * @param onItemSwipeLeft   OnItemSwipeListener for swiped left
+	 * @param onItemSwipeRight  OnItemSwipeListener for swiped right
 	 */
-	@android.databinding.BindingAdapter(value = {"swipeEnabled", "drawableSwipeLeft", "drawableSwipeRight", "bgColorSwipeLeft", "bgColorSwipeRight", "onSwipeLeft", "onSwipeRight"}, requireAll = false)
+	@android.databinding.BindingAdapter(value = {"swipeEnabled", "drawableSwipeLeft", "drawableSwipeRight", "bgColorSwipeLeft", "bgColorSwipeRight", "onItemSwipeLeft", "onItemSwipeRight"}, requireAll = false)
 	public static void setItemSwipeToRecyclerView(RecyclerView recyclerView, boolean swipeEnabled, Drawable drawableLeft, Drawable drawableRight, int bgColorSwipeLeft, int bgColorSwipeRight,
-	                                              SwipeItemTouchHelperCallback.OnItemSwipeListener onSwipeLeft, SwipeItemTouchHelperCallback.OnItemSwipeListener onSwipeRight) {
+	                                              SwipeItemTouchHelperCallback.OnItemSwipeListener onItemSwipeLeft, SwipeItemTouchHelperCallback.OnItemSwipeListener onItemSwipeRight) {
 
 		... // attach RecyclerView to SwipeItemTouchHelperCallback as above
 	}
@@ -67,8 +67,8 @@ In your `XML` file
         bind:bgColorSwipeRight="@{@color/app_red}"
         bind:drawableSwipeLeft="@{@drawable/ic_check_white_24dp}"
         bind:drawableSwipeRight="@{@drawable/ic_close_white_24dp}"
-        bind:onSwipeLeft="@{(position) -> handler.onSwipedLeft(position)}"
-        bind:onSwipeRight="@{(position) -> handler.onSwipedRight(position)}"
+        bind:onItemSwipeLeft="@{(position) -> handler.onItemSwipedLeft(position)}"
+        bind:onItemSwipeRight="@{(position) -> handler.onItemSwipedRight(position)}"
         bind:swipeEnabled="@{true}"/>
 ```
 
