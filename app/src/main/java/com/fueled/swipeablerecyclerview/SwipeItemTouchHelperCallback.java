@@ -20,7 +20,7 @@ public class SwipeItemTouchHelperCallback extends ItemTouchHelper.SimpleCallback
 
 	private Drawable drawableLeft, drawableRight;
 	private Paint paintLeft, paintRight;
-	private OnItemSwipeListener swipeLeftListener, swipeRightListener;
+	private OnItemSwipeListener onItemSwipeLeftListener, onItemSwipeRightListener;
 	private boolean swipeEnabled;
 
 	private SwipeItemTouchHelperCallback(int dragDirs, int swipeDirs) {
@@ -34,8 +34,8 @@ public class SwipeItemTouchHelperCallback extends ItemTouchHelper.SimpleCallback
 		drawableLeft = builder.drawableLeft;
 		drawableRight = builder.drawableRight;
 		swipeEnabled = builder.swipeEnabled;
-		swipeLeftListener = builder.swipeLeftListener;
-		swipeRightListener = builder.swipeRightListener;
+		onItemSwipeLeftListener = builder.onItemSwipeLeftListener;
+		onItemSwipeRightListener = builder.onItemSwipeRightListener;
 	}
 
 	private void setPaintColor(Paint paint, int color) {
@@ -55,9 +55,9 @@ public class SwipeItemTouchHelperCallback extends ItemTouchHelper.SimpleCallback
 	@Override public void onSwiped(RecyclerView.ViewHolder viewHolder, int direction) {
 		int position = viewHolder.getAdapterPosition();
 		if (direction == ItemTouchHelper.LEFT) {
-			swipeLeftListener.onItemSwiped(position);
+			onItemSwipeLeftListener.onItemSwiped(position);
 		} else if (direction == ItemTouchHelper.RIGHT) {
-			swipeRightListener.onItemSwiped(position);
+			onItemSwipeRightListener.onItemSwiped(position);
 		}
 	}
 
@@ -93,7 +93,7 @@ public class SwipeItemTouchHelperCallback extends ItemTouchHelper.SimpleCallback
 		private int dragDirs, swipeDirs;
 		private Drawable drawableLeft, drawableRight;
 		private int bgColorSwipeLeft, bgColorSwipeRight;
-		private OnItemSwipeListener swipeLeftListener, swipeRightListener;
+		private OnItemSwipeListener onItemSwipeLeftListener, onItemSwipeRightListener;
 		private boolean swipeEnabled;
 
 		public Builder(int dragDirs, int swipeDirs) {
@@ -121,18 +121,18 @@ public class SwipeItemTouchHelperCallback extends ItemTouchHelper.SimpleCallback
 			return this;
 		}
 
-		public Builder swipeLeftListener(OnItemSwipeListener val) {
-			swipeLeftListener = val;
+		public Builder onItemSwipeLeftListener(OnItemSwipeListener val) {
+			onItemSwipeLeftListener = val;
 			return this;
 		}
 
-		public Builder swipeRightListener(OnItemSwipeListener val) {
-			swipeRightListener = val;
+		public Builder onItemSwipeRightListener(OnItemSwipeListener val) {
+			onItemSwipeRightListener = val;
 			return this;
 		}
 
-		public Builder setSwipeEnabled(boolean swipeEnabled) {
-			this.swipeEnabled = swipeEnabled;
+		public Builder setSwipeEnabled(boolean val) {
+			swipeEnabled = val;
 			return this;
 		}
 

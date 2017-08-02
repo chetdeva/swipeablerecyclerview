@@ -35,8 +35,8 @@ public class BindingAdapter {
 				.drawableLeft(drawableLeft)
 				.drawableRight(drawableRight)
 				.setSwipeEnabled(swipeEnabled)
-				.swipeLeftListener(onItemSwipeLeft)
-				.swipeRightListener(onItemSwipeRight)
+				.onItemSwipeLeftListener(onItemSwipeLeft)
+				.onItemSwipeRightListener(onItemSwipeRight)
 				.build();
 
 		ItemTouchHelper itemTouchHelper = new ItemTouchHelper(swipeCallback);

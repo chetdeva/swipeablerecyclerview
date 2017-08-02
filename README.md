@@ -7,15 +7,15 @@ SwipeableRecyclerView provides a wrapper class `SwipeItemTouchHelperCallback` ex
 ## How to Use
 
 ```
-    SwipeItemTouchHelperCallback swipeCallback = new SwipeItemTouchHelperCallback
+    ItemTouchHelper.Callback swipeCallback = new SwipeItemTouchHelperCallback
             .Builder(0, ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT)
             .bgColorSwipeLeft(bgColorSwipeLeft)
             .bgColorSwipeRight(bgColorSwipeRight)
             .drawableLeft(drawableLeft)
             .drawableRight(drawableRight)
             .setSwipeEnabled(swipeEnabled)
-            .swipeLeftListener(onItemSwipeLeft)
-            .swipeRightListener(onItemSwipeRight)
+            .onItemSwipeLeftListener(onItemSwipeLeft)
+            .onItemSwipeRightListener(onItemSwipeRight)
             .build();
 
     ItemTouchHelper itemTouchHelper = new ItemTouchHelper(swipeCallback);
