@@ -6,7 +6,7 @@ SwipeableRecyclerView provides a wrapper class `SwipeItemTouchHelperCallback` ex
 
 ## How to Use
 
-```
+```java
     ItemTouchHelper.Callback swipeCallback = new SwipeItemTouchHelperCallback
             .Builder(0, ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT)
             .bgColorSwipeLeft(bgColorSwipeLeft)
@@ -26,7 +26,7 @@ SwipeableRecyclerView provides a wrapper class `SwipeItemTouchHelperCallback` ex
 
 In your `Gradle`
 
-```
+```groovy
     dataBinding {
         enabled = true
     }
@@ -34,7 +34,7 @@ In your `Gradle`
 
 In your `BindingAdapter`
 
-```
+```java
 	/**
 	 * Bind ItemTouchHelper.SimpleCallback with RecyclerView
 	 *
@@ -57,7 +57,7 @@ In your `BindingAdapter`
 
 In your `XML` file
 
-```
+```xml
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rv"
         android:layout_width="match_parent"
@@ -76,7 +76,7 @@ In your `XML` file
 
 Add Android Support Design dependency to your gradle file.
 
-```
+```groovy
     dependencies {
         compile 'com.android.support:design:{latest_version}'
     }
