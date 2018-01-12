@@ -1,6 +1,6 @@
 ## Swipeable RecyclerView
 
-SwipeableRecyclerView provides a wrapper class `[SwipeItemTouchHelperCallback](./app/src/main/java/com/fueled/swipeablerecyclerview/SwipeItemTouchHelperCallback.java)` extends `ItemTouchHelper.Callback` which can be used to add Swiping capability to your RecyclerView items. You can make use of `DataBinding` to bind it via XML.
+SwipeableRecyclerView provides a wrapper class [SwipeItemTouchHelperCallback](./app/src/main/java/com/fueled/swipeablerecyclerview/SwipeItemTouchHelperCallback.java) extends `ItemTouchHelper.Callback` which can be used to add Swiping capability to your RecyclerView items. You can make use of `DataBinding` to bind it via XML.
 
 <img src="./README_images/swipeable_recyclerview.gif" width="300" height="534"/>
 
