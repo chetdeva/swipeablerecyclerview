@@ -31,8 +31,8 @@ public class SwipeItemTouchHelperCallback extends ItemTouchHelper.SimpleCallback
 		this(builder.dragDirs, builder.swipeDirs);
 		setPaintColor(paintLeft = new Paint(Paint.ANTI_ALIAS_FLAG), builder.bgColorSwipeLeft);
 		setPaintColor(paintRight = new Paint(Paint.ANTI_ALIAS_FLAG), builder.bgColorSwipeRight);
-		drawableLeft = builder.drawableLeft;
-		drawableRight = builder.drawableRight;
+		drawableLeft = builder.drawableSwipeLeft;
+		drawableRight = builder.drawableSwipeRight;
 		swipeEnabled = builder.swipeEnabled;
 		onItemSwipeLeftListener = builder.onItemSwipeLeftListener;
 		onItemSwipeRightListener = builder.onItemSwipeRightListener;
@@ -91,7 +91,7 @@ public class SwipeItemTouchHelperCallback extends ItemTouchHelper.SimpleCallback
 
 	public static final class Builder {
 		private int dragDirs, swipeDirs;
-		private Drawable drawableLeft, drawableRight;
+		private Drawable drawableSwipeLeft, drawableSwipeRight;
 		private int bgColorSwipeLeft, bgColorSwipeRight;
 		private OnItemSwipeListener onItemSwipeLeftListener, onItemSwipeRightListener;
 		private boolean swipeEnabled;
@@ -101,13 +101,13 @@ public class SwipeItemTouchHelperCallback extends ItemTouchHelper.SimpleCallback
 			this.swipeDirs = swipeDirs;
 		}
 
-		public Builder drawableLeft(Drawable val) {
-			drawableLeft = val;
+		public Builder drawableSwipeLeft(Drawable val) {
+			drawableSwipeLeft = val;
 			return this;
 		}
 
-		public Builder drawableRight(Drawable val) {
-			drawableRight = val;
+		public Builder drawableSwipeRight(Drawable val) {
+			drawableSwipeRight = val;
 			return this;
 		}
 
